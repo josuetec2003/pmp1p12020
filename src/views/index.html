@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi presupuesto</title>
+	<link rel="stylesheet" href="../assets/css/photon.min.css">
+	<style>
+		.container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			height: 100vh; /* vh: viewport-height: */
+		}
+		.item {
+			border: 1px solid #000;
+			font-size: 20pt;
+			padding: 5px;
+		}
+		label, input, button {
+			font-size: 15pt !important;
+		}
+		.item:nth-of-type(1) {
+			background-color: green;
+			color: #fff;
+		}
+		.item:nth-of-type(3) {
+			background-color: red;
+			color: #fff;
+		}
+		.item:nth-of-type(2) {
+			padding: 50px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<header class="toolbar toolbar-header">
+  		<h1 class="title">Presupuesto v1.0.0</h1>
+
+  		<div class="toolbar-actions">
+    		<div class="btn-group">
+    			<button class="btn btn-default btn-large">
+			    	<span class="icon icon-upload icon-text"></span>
+			    	Gastos
+			    </button>
+			    <button class="btn btn-default btn-large">
+			    	<span class="icon icon-download icon-text"></span>
+			    	Ingresos
+			    </button>
+    		</div>
+
+    		<button class="btn btn-default btn-large pull-right">
+		    	<span class="icon icon-cog icon-text"></span>
+		    	Configuraciones
+		    </button>
+    	</div>
+  	</header>
+
+  	<section class="container">
+  		<div class="item">Verde</div>
+  		<div class="item">
+  			<div class="form-group">
+  				<label for="nombre">Nombre</label>
+  				<input id="nombre" type="text" class="form-control">
+  			</div>
+
+  			<div class="form-group">
+  				<label for="apellido">Apellido</label>
+  				<input id="apellido" type="text" class="form-control">
+  			</div>
+
+  			<div class="form-group">
+  				<label for="fecha-nacimiento">Fecha de nacimiento</label>
+  				<input id="fecha-nacimiento" type="date" class="form-control">
+  			</div>
+
+  			<div class="form-group" style="text-align: center">
+  				<button class="btn btn-primary btn-large">Guardar</button>
+  			</div>
+  		</div>
+  		<div class="item">Rojo</div>
+  	</section>
+
+  	<script src="../assets/js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
