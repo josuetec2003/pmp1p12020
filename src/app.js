@@ -1,5 +1,14 @@
 'use strict'
 const {app, BrowserWindow} = require('electron')
+const path = require('path')
+
+
+if (process.env.NODE_ENV === 'development')
+{
+	require('electron-reload')(__dirname, {
+		electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
+	})
+}
 
 app.on('ready', () => {
 	var win = new BrowserWindow({
@@ -7,8 +16,8 @@ app.on('ready', () => {
 			nodeIntegration: true
 		},
 		center: true,
-		width: 700,
-		height: 500,
+		width: 1200,
+		height: 800,
 		show: false
 	})
 

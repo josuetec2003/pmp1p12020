@@ -7,7 +7,7 @@
 	<style>
 		.container {
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 200px 1fr 1fr;
 			grid-template-rows: 1fr;
 			height: 100vh; /* vh: viewport-height: */
 		}
@@ -24,8 +24,8 @@
 			color: #fff;
 		}
 		.item:nth-of-type(3) {
-			background-color: red;
-			color: #fff;
+			background-color: #F0F4F4;
+			color: #848789;
 		}
 		.item:nth-of-type(2) {
 			padding: 50px;
@@ -58,7 +58,7 @@
   	</header>
 
   	<section class="container">
-  		<div class="item">Verde</div>
+  		<div class="item">Blanco</div>
   		<div class="item">
   			<div class="form-group">
   				<label for="nombre">Nombre</label>
@@ -76,10 +76,23 @@
   			</div>
 
   			<div class="form-group" style="text-align: center">
-  				<button class="btn btn-primary btn-large">Guardar</button>
+  				<button id="btn-guardar" class="btn btn-primary btn-large">Guardar</button>
   			</div>
   		</div>
-  		<div class="item">Rojo</div>
+  		<div class="item">
+  			<table style="font-size: 15pt">
+  				<thead>
+  					<tr>
+  						<th>Nombre</th>
+  						<th>Apellido</th>
+  						<th>Fecha de nacimiento</th>
+  						<th>Acción</th>
+  					</tr>
+  				</thead>
+
+  				<tbody id="table-data"></tbody>
+  			</table>
+  		</div>
   	</section>
 
   	<script src="../assets/js/scripts.js"></script>
